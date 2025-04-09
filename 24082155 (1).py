@@ -10,11 +10,8 @@ import matplotlib.pyplot as plt
 from scipy.fft import fft, ifft
 from sklearn.linear_model import LinearRegression
 from datetime import datetime
-from google.colab import drive
 
-drive.mount('/content/drive')
-
-data = pd.read_csv('/content/drive/My Drive/sales5.csv')
+data = pd.read_csv('sales5.csv')
 
 data['Date'] = pd.to_datetime(data['Date'])
 data['Year'] = data['Date'].dt.year
